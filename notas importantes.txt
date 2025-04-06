@@ -1,0 +1,19 @@
+tipos de datos que se pueden manejar
+
+numerico  : enteros (int ) ,  flotante (float)  , complejos
+
+textos ( strings)
+
+booleanos : true  / false
+
+
+operadores que se utilizan
+
+aritmeticos : + - %(modulo) **(exponente)  //(division entera)
+
+comparacion : ==  < ,  >  , <= , >= , !=
+
+logicos: and , or , not
+
+asginacion : =
+nombre = leo
