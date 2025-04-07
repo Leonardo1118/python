@@ -17,3 +17,9 @@ logicos: and , or , not
 
 asginacion : =
 nombre = leo
+
+
+python es case sensitive (distingue entre ayusculas y minusculas)
+
+lower - > trasnforma uan cadena a minuscula
+upper -> transforma uan cadena en mayuscula
