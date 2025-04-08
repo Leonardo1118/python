@@ -23,3 +23,18 @@ python es case sensitive (distingue entre ayusculas y minusculas)
 
 lower - > trasnforma uan cadena a minuscula
 upper -> transforma uan cadena en mayuscula
+
+print("hola" , end= "") -> con el end="" no hace salto de lineas
+el argumento **`end` **te permite modificar este comportamiento. Puedes especificar qué carácter (o cadena) deseas que sea colocado al final de la salida en lugar del salto de línea predeterminado.
+
+
+1. `f` antes de las comillas indica que es una **f-string**.
+2. `"valor de la variable {i}"` es la cadena de texto.
+    - `valor de la variable` es texto fijo que se imprimirá tal cual.
+    - `{i}` indica que se va a insertar el valor de la variable `i` dentro de este texto.
+
+ for i in range(5):
+    print(f"valor de la variable {i}")
+
+
+def devuelve_ciudades(*ciudades): un *antes de un parametro  le estamos indicando que vamos a recibir un numeor indeterminado de elemntos y esos argumentos lo va recibir en forma de tupla
