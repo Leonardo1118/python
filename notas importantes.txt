@@ -152,3 +152,19 @@ isinstance(antonio, Persona)   # ✅ True también (porque Empleado hereda de Pe
 “Un empleado es una persona, pero una persona no siempre es un empleado.”
 
 
+
+
+🧩 ¿Qué es un módulo?
+Un módulo es simplemente un archivo .py que contiene funciones, clases o variables que puedes reutilizar en otros programas.
+
+🔧 Sirve para:
+
+Organizar mejor tu código
+
+Evitar repetir código
+
+ 📦 ¿Qué es un paquete?
+Un paquete es una carpeta que contiene varios módulos.
+Para que Python la reconozca como paquete, debe tener un archivo llamado __init__.py (aunque en versiones modernas ya no es obligatorio, sigue siendo buena práctica).
+
+
