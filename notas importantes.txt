@@ -38,3 +38,117 @@ el argumento **`end` **te permite modificar este comportamiento. Puedes especifi
 
 
 def devuelve_ciudades(*ciudades): un *antes de un parametro  le estamos indicando que vamos a recibir un numeor indeterminado de elemntos y esos argumentos lo va recibir en forma de tupla
+
+
+
+
+CONSTRUCTOR -> metodo especial que le da un estado inical de un objeto que pertenezca a uan clase
+
+
+principio de sustitucion --> es siempre un/a                  isintance()
+
+
+
+📘 Definiciones de Programación Orientada a Objetos (POO)
+✅ Clase
+Modelo donde se definen las características comunes (atributos y comportamientos) de un grupo de objetos.
+Ejemplo: Una clase Perro puede tener atributos como raza y color, y métodos como ladrar().
+
+✅ Ejemplar / Instancia / Objeto de clase
+Es una instancia concreta de una clase, es decir, un objeto que pertenece a esa clase y tiene valores específicos.
+Ejemplo: mi_perro = Perro("Labrador", "Negro") es un objeto de la clase Perro.
+
+✅ Modularización
+Una aplicación compleja debe estar formada por varias clases o módulos.
+La modularización permite dividir el programa en partes más pequeñas, reutilizables y fáciles de mantener.
+✔ Mejora la organización del código y facilita su reutilización.
+
+✅ Encapsulamiento
+Es un principio que consiste en ocultar los detalles internos de una clase y permitir el acceso solo a través de métodos públicos.
+✔ Evita que otras clases modifiquen directamente el funcionamiento interno.
+Ejemplo: Puedes consultar el saldo de una cuenta bancaria con un método, sin saber cómo se calcula internamente.
+
+✅ Métodos de acceso
+Son métodos que permiten leer o modificar atributos privados de una clase de forma controlada.
+✔ Ayudan a proteger los datos internos del objeto.
+Ejemplo: get_nombre() para obtener un valor y set_nombre(valor) para modificarlo.
+
+Polimorfismo en Programación Orientada a Objetos
+✅ ¿Qué es el polimorfismo?
+El polimorfismo es cuando varias clases diferentes pueden usar un mismo método, pero cada una lo hace a su manera.
+
+📌 Significa “muchas formas” (del griego poly = muchos, morph = forma).
+
+ejemplo real sencillo
+Todas estas clases tienen un método llamado hacer_sonido(), pero cada una lo hace diferente:
+
+
+class Perro:
+    def hacer_sonido(self):
+        print("Guau!")
+
+class Gato:
+    def hacer_sonido(self):
+        print("Miau!")
+
+class Vaca:
+    def hacer_sonido(self):
+        print("Muu!")
+Y luego puedes hacer esto:
+
+
+def reproducir_sonido(animal):
+    animal.hacer_sonido()
+
+reproducir_sonido(Perro())  # Guau!
+reproducir_sonido(Gato())   # Miau!
+reproducir_sonido(Vaca())   # Muu!
+💡 Aunque el método se llama igual (hacer_sonido), cada clase lo implementa diferente. ¡Eso es polimorfismo!
+
+🧠 Piénsalo así:
+“Diferentes objetos responden al mismo mensaje (método), pero con comportamientos distintos.”
+
+🛠️ ¿Para qué sirve?
+Para escribir código más flexible y reutilizable
+
+Para trabajar con listas de objetos distintos que se comportan de manera coherente
+
+Para reducir código repetido
+
+
+
+
+
+
+
+
+Herencia en Python con super() e isinstance()
+👨‍🏫 Clase Persona
+Es la clase padre (base).
+Define atributos comunes: nombre, edad, lugar_residencia.
+Tiene un método descripcion() para mostrar esa info.
+
+👨‍💼 Clase Empleado(Persona)
+Es la clase hija.
+Hereda todo de Persona, pero además agrega:
+
+salario
+
+antiguedad
+
+Usa super() para conectar con la clase padre y no repetir código.
+
+También redefine (sobrescribe) el método descripcion() para añadir más datos.
+
+🧪 isinstance(objeto, Clase)
+Sirve para saber si un objeto es instancia de cierta clase.
+
+
+isinstance(antonio, Empleado)  # ✅ True
+isinstance(antonio, Persona)   # ✅ True también (porque Empleado hereda de Persona)
+👉 ¡Un Empleado es también una Persona!
+
+🧠 Piénsalo así:
+“Un empleado es una persona, pero una persona no siempre es un empleado.”
+
+
