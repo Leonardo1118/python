@@ -167,4 +167,32 @@ Evitar repetir código
 Un paquete es una carpeta que contiene varios módulos.
 Para que Python la reconozca como paquete, debe tener un archivo llamado __init__.py (aunque en versiones modernas ya no es obligatorio, sigue siendo buena práctica).
 
+ejempllo de un paquete distribuido
 
+setup.py
+from setuptools import setup
+
+setup(
+    name='repaso',
+    version='1.0',
+    description='Repaso de Python',
+    author='<LEONARDO ALVAREZ VALENCIA>',
+    author_email='<Leonardoalvarez1118@gmail.com>',
+    packages=['calculos','calculos.redondeo_potencia']
+)
+
+
+Para hacer un paquete distribuible usamos:
+  python nombre_del_paquete.py sdist
+
+Para instalarlo, hay que ir a la ruta del directorio `dist/` y ejecutar:
+  pip3 install nombre_del_paquete.tar.gz
+
+Para desinstalarlo, usamos:
+  pip3 uninstall nombre_paquete
+🛠️ Detalles útiles:
+sdist (source distribution): crea un paquete fuente comprimido en un .tar.gz, ubicado dentro de una carpeta llamada dist/.
+
+Es importante tener un archivo setup.py bien configurado en el paquete.
+
+También podés usar pip install . desde la raíz del proyecto si tiene setup.py.
